@@ -35,7 +35,7 @@ const playMusic = () => {
     <Home />
     <p class="text-sm text-center mt-4">@copyright 2023 - Created by Ganesh Patra</p>
   </main>
-  <audio ref="audioRef" src="../public//audioSource.mp3" loop autoplay></audio>
+  <audio ref="audioRef" src="/audioSource.mp3" loop autoplay></audio>
 </template>
 
 <style scoped></style>
