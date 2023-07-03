@@ -1,6 +1,20 @@
 <template>
   <div class="flex flex-col items-center justify-center">
-    <h1 class="text-lg md:text-3xl italic font-bold text-red-500 mb-6 h-8"><span></span></h1>
+    <h1
+      v-if="!is108Japa"
+      class="text-lg md:text-3xl italic font-bold text-red-500 mb-6 h-8 text-center"
+    >
+      <span></span>
+    </h1>
+    <div
+      v-if="is108Japa"
+      class="text-lg md:text-3xl italic font-bold text-red-500 mb-6 space-y-2 text-center"
+    >
+      <h1>
+        śrī-kṛṣṇa-caitanya prabhu-nityānanda śrī-advaita gadādhara śrīvāsādi-gaura-bhakta-vṛnda
+      </h1>
+      <h1>श्री-कृष्ण-चैतन्य प्रभु-नित्यानंद श्री-अद्वैत गदाधर श्रीवासादि-गौरा-भक्त-वृंदा</h1>
+    </div>
     <div class="flex items-center justify-evenly gap-4 w-full">
       <div class="flex flex-col gap-2">
         <p class="appearance-none bg-orange-800 text-white px-5 py-3 rounded-lg text-center">
@@ -67,6 +81,10 @@ const handleJapaCounter = (index: number) => {
     localStorage.setItem('totalCount', totalJapa.value.toString())
   }
 }
+
+const is108Japa = computed(() => {
+  return counter.value % 108 === 0
+})
 
 const handleResetJapaCounter = () => {
   counter.value = 0
