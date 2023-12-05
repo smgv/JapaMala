@@ -93,8 +93,10 @@ const handleResetJapaCounter = () => {
 
 const getDate = computed(() => {
   const date = new Date()
-  return `Date - ${date.getDate() < 10 ? '0' + date.getDate() : date.getDate()}/${
-    date.getMonth() < 10 ? '0' + date.getMonth() : date.getMonth()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+  return `Date - ${day < 10 ? '0' + day : day}/${
+    month < 10 ? '0' + month : month
   }/${date.getFullYear()}`
 })
 
