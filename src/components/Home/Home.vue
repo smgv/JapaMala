@@ -60,6 +60,7 @@
 </template>
 
 <script setup lang="ts">
+import mixpanelService from '@/mixpanelService'
 import { computed, onMounted, ref } from 'vue'
 
 const counter = ref(0)
@@ -135,6 +136,8 @@ onMounted(() => {
       }
     }
   })
+
+  mixpanelService.track('Home Page Loaded', { page: 'Home' })
 })
 </script>
 

@@ -12,14 +12,18 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "mixpanel-browser": "^2.48.1",
     "pinia": "^2.1.3",
+    "uuid": "^9.0.1",
     "vue": "^3.3.4",
     "vue-router": "^4.2.2"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
     "@tsconfig/node18": "^2.0.1",
+    "@types/mixpanel-browser": "^2.47.5",
     "@types/node": "^18.16.17",
+    "@types/uuid": "^9.0.7",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vitejs/plugin-vue-jsx": "^3.0.1",
     "@vue/eslint-config-prettier": "^7.1.0",
